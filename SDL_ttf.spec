@@ -84,8 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 
 mv -f $RPM_BUILD_ROOT%{_bindir}/showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
 
-gzip -9nf README CHANGES
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -94,12 +92,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README CHANGES
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc {README,CHANGES}.gz
 %{_includedir}/SDL/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
