@@ -11,7 +11,7 @@ Group(pl):	Biblioteki
 Source0:	http://www.libsdl.org/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	XFree86-devel
-BuildRequires:	SDL-devel >= 1.0.1
+BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	freetype1-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
