@@ -5,10 +5,10 @@ Version:	2.0.4
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.libsdl.org/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
+Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
 URL:		http://www.libsdl.org/projects/SDL_ttf/
-BuildRequires:	XFree86-devel
 BuildRequires:	SDL-devel >= 1.2.3
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
@@ -34,7 +34,7 @@ Requires:	SDL-devel
 %description devel
 Header files and more to develop SDL_ttf applications.
 
-%description -l pl devel
+%description devel -l pl
 Pliki na³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf.
 
 %package static
@@ -46,7 +46,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Statis SDL_ttf libraries.
 
-%description -l pl static
+%description static -l pl
 Biblioteki statyczne SDL_ttf.
 
 %prep
