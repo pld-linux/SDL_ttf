@@ -2,8 +2,8 @@ Summary:	Simple DirectMedia Layer - ttf handling
 Summary(pl):	Biblioteka obs³ugi fontów TTF
 Summary(pt_BR):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
-Version:	2.0.5
-Release:	2
+Version:	2.0.6
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
@@ -79,10 +79,11 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_bindir}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-mv -f $RPM_BUILD_ROOT%{_bindir}/showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
+install showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
 
 %clean
 rm -rf $RPM_BUILD_ROOT
