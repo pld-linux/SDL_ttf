@@ -2,12 +2,12 @@ Summary:	Simple DirectMedia Layer - ttf handling
 Summary(pl):	Biblioteka obs³ugi fontów TTF
 Summary(pt_BR):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
-Version:	2.0.6
-Release:	2
+Version:	2.0.7
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
-# Source0-md5:	880ca22ac3e8beb5cca2326cc8069733
+# Source0-md5:	0f6ee1a502e6913a412aac353dc75bbc
 Patch0:		%{name}-ft2build_h.patch
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	SDL-devel >= 1.2.5-2
