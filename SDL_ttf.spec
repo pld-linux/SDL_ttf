@@ -104,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc {README,CHANGES}.gz
 %{_includedir}/SDL/*
 %attr(755,root,root) %{_libdir}/lib*.so
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 
 %files static
 %defattr(644,root,root,755)
