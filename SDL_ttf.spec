@@ -1,7 +1,7 @@
 Summary:	Simple DirectMedia Layer - ttf handling
 Name:		SDL_ttf
-Version:	1.0.1
-Release:	2
+Version:	1.2.1
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
