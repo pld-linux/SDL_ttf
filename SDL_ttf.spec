@@ -9,6 +9,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 Source0:	http://www.libsdl.org/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	XFree86-devel
