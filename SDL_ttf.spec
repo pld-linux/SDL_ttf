@@ -1,7 +1,7 @@
 Summary:	Simple DirectMedia Layer - ttf handling
 Name:		SDL_ttf
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
@@ -9,9 +9,9 @@ Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
 URL:		http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/
-BuildRequires:	freetype-devel
-BuildRequires:	SDL-devel >= 1.0.1
 BuildRequires:	XFree86-devel
+BuildRequires:	SDL-devel >= 1.0.1
+BuildRequires:	freetype1-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
