@@ -1,5 +1,6 @@
 Summary:	Simple DirectMedia Layer - ttf handling
 Summary(pl):	Biblioteka obs³ugi fontów TTF
+Summary(pt_BR):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
 Version:	2.0.5
 Release:	1
@@ -26,9 +27,15 @@ Przyk³adowa biblioteka do obs³ugi fontów TrueType w aplikacjach SDL.
 Pakiet zawiera przyk³adowy program "sdlfont", wy¶wietlaj±cy
 przyk³adowy ci±g znaków zadanym fontem TrueType.
 
+%description -l pt_BR
+Esta é uma biblioteca que permite a utilização de fontes TrueType em
+suas aplicações SDL. Ela vem com o programa exemplo "showfont" que
+mostra uma string exemplo para uma fonte TrueType fornecida.
+
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
 Summary(pl):	Pliki na³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf
+Summary(pt_BR):	Cabeçalhos para desenvolver programas utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	SDL-devel
@@ -39,9 +46,14 @@ Header files and more to develop SDL_ttf applications.
 %description devel -l pl
 Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf.
 
+%description devel -l pt_BR
+Este pacote contém os cabeçalhos que programadores vão precisar para
+desenvolver aplicações utilizando a %{name}.
+
 %package static
 Summary:	Static SDL_ttf libraries
 Summary(pl):	Biblioteki statyczne SDL_ttf
+Summary(pt_BR):	Biblioteca estática para desenvolvimento utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
@@ -50,6 +62,11 @@ Static SDL_ttf libraries.
 
 %description static -l pl
 Biblioteki statyczne SDL_ttf.
+
+%description static -l pt_BR
+Este pacote contém a biblioteca estática que programadores vão
+precisar para desenvolver aplicações linkados estaticamente com a
+%{name}.
 
 %prep
 %setup -q
