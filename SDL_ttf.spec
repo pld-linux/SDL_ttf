@@ -1,7 +1,7 @@
 Summary:	Simple DirectMedia Layer - ttf handling
 Name:		SDL_ttf
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
@@ -54,6 +54,8 @@ rm -rf $RPM_BUILD_ROOT
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
+mv -f $RPM_BUILD_ROOT%{_bibdir}/showfont $RPM_BUILD_ROOT%{_bibdir}/sdlfont
+
 gzip -9nf README CHANGES
 
 %clean
@@ -64,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/showfont
+%attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
