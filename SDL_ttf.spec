@@ -74,8 +74,8 @@ precisar para desenvolver aplicações linkados estaticamente com a
 %build
 rm -f missing
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
