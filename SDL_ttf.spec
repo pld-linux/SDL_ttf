@@ -13,7 +13,7 @@ BuildRequires:	SDL-devel >= 1.2.5-2
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	freetype-devel >= 2.0.0
+BuildRequires:	freetype-devel >= 2.1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
