@@ -34,7 +34,7 @@ mostra uma string exemplo para uma fonte TrueType fornecida.
 
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
-Summary(pl):	Pliki na³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf
+Summary(pl):	Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf
 Summary(pt_BR):	Cabeçalhos para desenvolver programas utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
