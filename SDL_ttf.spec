@@ -91,7 +91,7 @@ install showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
