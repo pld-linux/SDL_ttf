@@ -14,9 +14,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_prefix		/usr/X11R6
 
 %description
-This is a sample library which allows you to use TrueType fonts in your SDL
-applications. It comes with an example program "showfont" which displays an
-example string for a given TrueType font file.
+This is a sample library which allows you to use TrueType fonts in
+your SDL applications. It comes with an example program "showfont"
+which displays an example string for a given TrueType font file.
 
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
@@ -75,4 +75,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.la
 
 %files static
-%attr(644,root,root) %{_libdir}/lib*.a
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
