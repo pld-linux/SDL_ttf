@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
-mv -f $RPM_BUILD_ROOT%{_bibdir}/showfont $RPM_BUILD_ROOT%{_bibdir}/sdlfont
+mv -f $RPM_BUILD_ROOT%{_bindir}/showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
 
 gzip -9nf README CHANGES
 
