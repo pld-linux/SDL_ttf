@@ -37,7 +37,7 @@ Summary:	Header files and more to develop SDL_ttf applications
 Summary(pl):	Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf
 Summary(pt_BR):	Cabeçalhos para desenvolver programas utilizando a %{name}
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel
 
 %description devel
@@ -55,7 +55,7 @@ Summary:	Static SDL_ttf libraries
 Summary(pl):	Biblioteki statyczne SDL_ttf
 Summary(pt_BR):	Biblioteca estática para desenvolvimento utilizando a %{name}
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SDL_ttf libraries.
