@@ -8,6 +8,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
 # Source0-md5:	880ca22ac3e8beb5cca2326cc8069733
+Patch0:		%{name}-ft2build_h.patch
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	SDL-devel >= 1.2.5-2
 BuildRequires:	XFree86-devel
@@ -69,6 +70,7 @@ precisar para desenvolver aplicações linkados estaticamente com a
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
