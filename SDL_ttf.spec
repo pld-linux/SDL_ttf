@@ -5,13 +5,6 @@ Version:	1.2.2
 Release:	4
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	‚…¬Ã…œ‘≈À…
-Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	http://www.libsdl.org/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	XFree86-devel
@@ -35,9 +28,6 @@ Przyk≥adowa biblioteka do obs≥ugi fontÛw TrueType w aplikacjach SDL.
 Summary:	Header files and more to develop SDL_ttf applications
 Summary(pl):	Pliki na≥Ûwkowe do rozwijania aplikacji uøywaj±cych SDL_ttf
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 Requires:	SDL-devel
 
@@ -51,9 +41,6 @@ Pliki na≥Ûwkowe do rozwijania aplikacji uøywaj±cych SDL_ttf.
 Summary:	Static SDL_ttf libraries
 Summary(pl):	Biblioteki statyczne SDL_ttf
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
