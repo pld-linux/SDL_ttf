@@ -1,9 +1,12 @@
 Summary:	Simple DirectMedia Layer - ttf handling
 Name:		SDL_ttf
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
+Group(de):	Libraries
+Group(fr):	Librairies
+Group(pl):	Biblioteki
 Source0:	http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
 URL:		http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/
 BuildRequires:	freetype-devel
@@ -21,6 +24,7 @@ which displays an example string for a given TrueType font file.
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -32,6 +36,7 @@ Header files and more to develop SDL_ttf applications.
 %package static
 Summary:	Statis SDL_ttf libraries
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -43,7 +48,6 @@ Statis SDL_ttf libraries.
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS 
 %configure
 %{__make}
 
@@ -51,8 +55,6 @@ LDFLAGS="-s"; export LDFLAGS
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 mv -f $RPM_BUILD_ROOT%{_bindir}/showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
 
