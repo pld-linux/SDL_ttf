@@ -73,7 +73,7 @@ precisar para desenvolver aplicações linkados estaticamente com a
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
