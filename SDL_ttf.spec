@@ -1,88 +1,78 @@
-%define name SDL_ttf
-%define version 1.0.1
+Summary:	Simple DirectMedia Layer - ttf handling
+Name:		SDL_ttf
+Version:	1.0.1
+Release:	2
+License:	LGPL
+Group:		Libraries
+Source0:	http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
+URL:		http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/
+BuildRequires:	freetype-devel
+BuildRequires:	SDL-devel >= 1.0.1
+BuildRequires:	XFree86-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-Summary: Simple DirectMedia Layer - ttf handling
-Name: %{name}
-Version: %{version}
-Release: 2mdk
-Source0: %{name}-%{version}.tar.bz2
-Copyright: LGPL
-Group: System/Libraries
-BuildRoot: %{_tmppath}/%{name}-buildroot
-URL: http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/
-Prefix: %{_prefix}
-Requires: SDL >= 1.0
+%define		_prefix		/usr/X11R6
 
 %description
 This is a sample library which allows you to use TrueType fonts in your SDL
 applications. It comes with an example program "showfont" which displays an
 example string for a given TrueType font file.
 
-Warning! TrueType font decoding is under patent, and software using this
-library may be in violation of this patent. Use at your own risk! See
-http://www.freetype.org/ for details.
-
 %package devel
-Summary: Libraries, includes and more to develop SDL applications.
-Group: Development/C
-Requires: %{name}
-Requires: SDL-devel
+Summary:	Header files and more to develop SDL_ttf applications
+Group:		Development/Libraries
+Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
+Requires:	%{name} = %{version}
+Requires:	SDL-devel
 
 %description devel
-This is a sample library which allows you to use TrueType fonts in your SDL
-applications. It comes with an example program "showfont" which displays an
-example string for a given TrueType font file.
+Header files and more to develop SDL_ttf applications.
 
-Warning! TrueType font decoding is under patent, and software using this
-library may be in violation of this patent. Use at your own risk! See
-http://www.freetype.org/ for details.
+%package static
+Summary:	Statis SDL_ttf libraries
+Group:		Development/Libraries
+Group(fr):	Development/Librairies
+Group(pl):	Programowanie/Biblioteki
+Requires:	%{name}-devel = %{version}
+
+%description static
+Statis SDL_ttf libraries.
 
 %prep
-rm -rf ${RPM_BUILD_ROOT}
-
-%setup
-#%patch -p1
+%setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{prefix}
+LDFLAGS="-s"; export LDFLAGS 
+%configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install prefix=$RPM_BUILD_ROOT/%{prefix}
+
+make install DESTDIR=$RPM_BUILD_ROOT
+
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
+
+gzip -9nf README CHANGES
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-/sbin/ldconfig
-
-%postun
-/sbin/ldconfig
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
-%defattr(-,root,root)
-%doc README COPYING
-%{prefix}/bin/showfont
-%{prefix}/lib/lib*.so.*
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/showfont
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
-%defattr(-,root,root)
-%doc README COPYING CHANGES
-%{prefix}/lib/*a
-%{prefix}/include/SDL/
-%{prefix}/lib/lib*.so
+%defattr(644,root,root,755)
+%doc *.gz
+%{_includedir}/SDL/*
+%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.la
 
-%changelog
-* Tue Apr 11 2000 Guillaume Cottenceau <gc@mandrakesoft.com> 1.0.1-2mdk
-- added url
-- fixed group
-- some minor package build fixes
-- built against stable SDL version, previous was using 1.1.x devel
-
-* Fri Feb 11 2000 Lenny Cartier <lenny@mandrakesoft.com>
-- new in contribs
-- used specfile provided by Hakan Tandogan <hakan@iconsult.com>
-
-* Sun Jan 16 2000 Hakan Tandogan <hakan@iconsult.com>
-- initial spec file
+%files static
+%attr(644,root,root) %{_libdir}/lib*.a
