@@ -1,7 +1,7 @@
 Summary:	Simple DirectMedia Layer - ttf handling
 Summary(pl):	Biblioteka obs³ugi fontów TTF
 Name:		SDL_ttf
-Version:	2.0.4
+Version:	2.0.5
 Release:	1
 License:	LGPL
 Group:		Libraries
@@ -11,18 +11,20 @@ BuildRequires:	SDL-devel >= 1.2.3
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	freetype-devel
+BuildRequires:	freetype-devel >= 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
 %description
 This is a sample library which allows you to use TrueType fonts in
-your SDL applications. It comes with an example program "showfont"
+your SDL applications. It comes with an example program "sdlfont"
 which displays an example string for a given TrueType font file.
 
 %description -l pl
 Przyk³adowa biblioteka do obs³ugi fontów TrueType w aplikacjach SDL.
+Pakiet zawiera przyk³adowy program "sdlfont", wy¶wietlaj±cy
+przyk³adowy ci±g znaków zadanym fontem TrueType.
 
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
@@ -35,7 +37,7 @@ Requires:	SDL-devel
 Header files and more to develop SDL_ttf applications.
 
 %description devel -l pl
-Pliki na³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf.
+Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf.
 
 %package static
 Summary:	Static SDL_ttf libraries
@@ -44,7 +46,7 @@ Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
-Statis SDL_ttf libraries.
+Static SDL_ttf libraries.
 
 %description static -l pl
 Biblioteki statyczne SDL_ttf.
@@ -82,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc {README,CHANGES}.gz
 %{_includedir}/SDL/*
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
