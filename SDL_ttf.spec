@@ -1,14 +1,15 @@
 Summary:	Simple DirectMedia Layer - ttf handling
+Summary(pl):	Biblioteka obs³ugi fontów TTF
 Name:		SDL_ttf
 Version:	1.2.2
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Group(de):	Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source0:	http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
-URL:		http://www.devolution.com/~slouken/SDL/projects/SDL_ttf/
+Source0:	http://www.libsdl.org/projects/SDL_ttf/src/%{name}-%{version}.tar.gz
+URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	XFree86-devel
 BuildRequires:	SDL-devel >= 1.0.1
 BuildRequires:	freetype1-devel
@@ -21,8 +22,12 @@ This is a sample library which allows you to use TrueType fonts in
 your SDL applications. It comes with an example program "showfont"
 which displays an example string for a given TrueType font file.
 
+%description -l pl
+Przyk³adowa biblioteka do obs³ugi fontów TrueType w aplikacjach SDL.
+
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
+Summary(pl):	Pliki na³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -33,8 +38,12 @@ Requires:	SDL-devel
 %description devel
 Header files and more to develop SDL_ttf applications.
 
+%description -l pl devel
+Pliki na³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf.
+
 %package static
-Summary:	Statis SDL_ttf libraries
+Summary:	Static SDL_ttf libraries
+Summary(pl):	Biblioteki statyczne SDL_ttf
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
@@ -43,6 +52,9 @@ Requires:	%{name}-devel = %{version}
 
 %description static
 Statis SDL_ttf libraries.
+
+%description -l pl static
+Biblioteki statyczne SDL_ttf.
 
 %prep
 %setup -q
