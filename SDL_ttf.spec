@@ -10,8 +10,9 @@ Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.g
 # Source0-md5:	0f6ee1a502e6913a412aac353dc75bbc
 Patch0:		%{name}-ft2build_h.patch
 URL:		http://www.libsdl.org/projects/SDL_ttf/
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	SDL-devel >= 1.2.5-2
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
 BuildRequires:	freetype-devel >= 2.1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
