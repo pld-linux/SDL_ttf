@@ -2,12 +2,12 @@ Summary:	Simple DirectMedia Layer - ttf handling
 Summary(pl):	Biblioteka obs³ugi fontów TTF
 Summary(pt_BR):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
-Version:	2.0.7
-Release:	2
+Version:	2.0.8
+Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
-# Source0-md5:	0f6ee1a502e6913a412aac353dc75bbc
+# Source0-md5:	094b6c08769e9842dbe1dfb5efa22df7
 Patch0:		%{name}-ft2build_h.patch
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	OpenGL-GLU-devel
@@ -15,6 +15,7 @@ BuildRequires:	SDL-devel >= 1.2.5-2
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
 BuildRequires:	freetype-devel >= 2.1.4
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +39,8 @@ Summary(pl):	Pliki nag³ówkowe do rozwijania aplikacji u¿ywaj±cych SDL_ttf
 Summary(pt_BR):	Cabeçalhos para desenvolver programas utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	SDL-devel
+Requires:	SDL-devel >= 1.2.5-2
+Requires:	freetype-devel >= 2.1.4
 
 %description devel
 Header files and more to develop SDL_ttf applications.
@@ -72,7 +74,10 @@ precisar para desenvolver aplicações linkados estaticamente com a
 %setup -q
 %patch0 -p1
 
+rm -f acinclude.m4
+
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
