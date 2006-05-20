@@ -91,7 +91,7 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
+install .libs/showfont $RPM_BUILD_ROOT%{_bindir}/sdlfont
 
 %clean
 rm -rf $RPM_BUILD_ROOT
