@@ -3,11 +3,12 @@ Summary(pl):	Biblioteka obs³ugi fontów TTF
 Summary(pt_BR):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
 Version:	2.0.8
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
 # Source0-md5:	094b6c08769e9842dbe1dfb5efa22df7
+# based on http://www.freetype.org/freetype2/patches/SDL_ttf-2.0.7-noftinternals.patch
 Patch0:		%{name}-ft2build_h.patch
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	OpenGL-GLU-devel
