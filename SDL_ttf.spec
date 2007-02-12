@@ -1,6 +1,6 @@
 Summary:	Simple DirectMedia Layer - ttf handling
-Summary(pl.UTF-8):   Biblioteka obsługi fontów TTF
-Summary(pt_BR.UTF-8):   Simple DirectMedia Layer - Biblioteca de fontes TrueType
+Summary(pl.UTF-8):	Biblioteka obsługi fontów TTF
+Summary(pt_BR.UTF-8):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
 Version:	2.0.8
 Release:	2
@@ -36,8 +36,8 @@ mostra uma string exemplo para uma fonte TrueType fornecida.
 
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
-Summary(pl.UTF-8):   Pliki nagłówkowe do rozwijania aplikacji używających SDL_ttf
-Summary(pt_BR.UTF-8):   Cabeçalhos para desenvolver programas utilizando a %{name}
+Summary(pl.UTF-8):	Pliki nagłówkowe do rozwijania aplikacji używających SDL_ttf
+Summary(pt_BR.UTF-8):	Cabeçalhos para desenvolver programas utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel >= 1.2.5-2
@@ -55,8 +55,8 @@ desenvolver aplicações utilizando a %{name}.
 
 %package static
 Summary:	Static SDL_ttf libraries
-Summary(pl.UTF-8):   Biblioteki statyczne SDL_ttf
-Summary(pt_BR.UTF-8):   Biblioteca estática para desenvolvimento utilizando a %{name}
+Summary(pl.UTF-8):	Biblioteki statyczne SDL_ttf
+Summary(pt_BR.UTF-8):	Biblioteca estática para desenvolvimento utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
