@@ -1,6 +1,6 @@
 Summary:	Simple DirectMedia Layer - ttf handling
-Summary(pl):	Biblioteka obs≥ugi fontÛw TTF
-Summary(pt_BR):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
+Summary(pl.UTF-8):   Biblioteka obs≈Çugi font√≥w TTF
+Summary(pt_BR.UTF-8):   Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
 Version:	2.0.8
 Release:	2
@@ -24,20 +24,20 @@ This is a sample library which allows you to use TrueType fonts in
 your SDL applications. It comes with an example program "sdlfont"
 which displays an example string for a given TrueType font file.
 
-%description -l pl
-Przyk≥adowa biblioteka do obs≥ugi fontÛw TrueType w aplikacjach SDL.
-Pakiet zawiera przyk≥adowy program "sdlfont", wy∂wietlaj±cy
-przyk≥adowy ci±g znakÛw zadanym fontem TrueType.
+%description -l pl.UTF-8
+Przyk≈Çadowa biblioteka do obs≈Çugi font√≥w TrueType w aplikacjach SDL.
+Pakiet zawiera przyk≈Çadowy program "sdlfont", wy≈õwietlajƒÖcy
+przyk≈Çadowy ciƒÖg znak√≥w zadanym fontem TrueType.
 
-%description -l pt_BR
-Esta È uma biblioteca que permite a utilizaÁ„o de fontes TrueType em
-suas aplicaÁıes SDL. Ela vem com o programa exemplo "showfont" que
+%description -l pt_BR.UTF-8
+Esta √© uma biblioteca que permite a utiliza√ß√£o de fontes TrueType em
+suas aplica√ß√µes SDL. Ela vem com o programa exemplo "showfont" que
 mostra uma string exemplo para uma fonte TrueType fornecida.
 
 %package devel
 Summary:	Header files and more to develop SDL_ttf applications
-Summary(pl):	Pliki nag≥Ûwkowe do rozwijania aplikacji uøywaj±cych SDL_ttf
-Summary(pt_BR):	CabeÁalhos para desenvolver programas utilizando a %{name}
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe do rozwijania aplikacji u≈ºywajƒÖcych SDL_ttf
+Summary(pt_BR.UTF-8):   Cabe√ßalhos para desenvolver programas utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	SDL-devel >= 1.2.5-2
@@ -46,29 +46,29 @@ Requires:	freetype-devel >= 2.1.4
 %description devel
 Header files and more to develop SDL_ttf applications.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe do rozwijania aplikacji uøywaj±cych SDL_ttf.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe do rozwijania aplikacji u≈ºywajƒÖcych SDL_ttf.
 
-%description devel -l pt_BR
-Este pacote contÈm os cabeÁalhos que programadores v„o precisar para
-desenvolver aplicaÁıes utilizando a %{name}.
+%description devel -l pt_BR.UTF-8
+Este pacote cont√©m os cabe√ßalhos que programadores v√£o precisar para
+desenvolver aplica√ß√µes utilizando a %{name}.
 
 %package static
 Summary:	Static SDL_ttf libraries
-Summary(pl):	Biblioteki statyczne SDL_ttf
-Summary(pt_BR):	Biblioteca est·tica para desenvolvimento utilizando a %{name}
+Summary(pl.UTF-8):   Biblioteki statyczne SDL_ttf
+Summary(pt_BR.UTF-8):   Biblioteca est√°tica para desenvolvimento utilizando a %{name}
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SDL_ttf libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne SDL_ttf.
 
-%description static -l pt_BR
-Este pacote contÈm a biblioteca est·tica que programadores v„o
-precisar para desenvolver aplicaÁıes linkados estaticamente com a
+%description static -l pt_BR.UTF-8
+Este pacote cont√©m a biblioteca est√°tica que programadores v√£o
+precisar para desenvolver aplica√ß√µes linkados estaticamente com a
 %{name}.
 
 %prep
