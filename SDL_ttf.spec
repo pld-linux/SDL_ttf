@@ -14,7 +14,7 @@ BuildRequires:	SDL-devel >= 1.2.5-2
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
 BuildRequires:	freetype-devel >= 2.1.4
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -72,8 +72,6 @@ SDL_ttf.
 %prep
 %setup -q
 
-rm -f acinclude.m4
-
 %build
 %{__libtoolize}
 %{__aclocal}
@@ -101,7 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES README
 %attr(755,root,root) %{_bindir}/sdlfont
-%attr(755,root,root) %{_libdir}/libSDL_ttf-*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libSDL_ttf-2.0.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libSDL_ttf-2.0.so.0
 
 %files devel
