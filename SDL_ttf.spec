@@ -77,7 +77,8 @@ SDL_ttf.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	LIBS="-lm"
 %{__make}
 
 %install
