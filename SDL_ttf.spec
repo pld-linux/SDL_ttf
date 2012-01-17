@@ -2,12 +2,12 @@ Summary:	Simple DirectMedia Layer - ttf handling
 Summary(pl.UTF-8):	Biblioteka obsługi fontów TTF
 Summary(pt_BR.UTF-8):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
-Version:	2.0.10
+Version:	2.0.11
 Release:	1
-License:	LGPL v2+
+License:	Zlib-like
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
-# Source0-md5:	814e6e17e8879254208d23b3b7e0354b
+# Source0-md5:	61e29bd9da8d245bc2471d1b2ce591aa
 URL:		http://www.libsdl.org/projects/SDL_ttf/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	SDL-devel >= 1.2.5-2
@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc CHANGES COPYING README
 %attr(755,root,root) %{_bindir}/sdlfont
 %attr(755,root,root) %{_libdir}/libSDL_ttf-2.0.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libSDL_ttf-2.0.so.0
