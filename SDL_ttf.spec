@@ -8,7 +8,7 @@ License:	Zlib-like
 Group:		Libraries
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
 # Source0-md5:	61e29bd9da8d245bc2471d1b2ce591aa
-URL:		http://www.libsdl.org/projects/SDL_ttf/
+URL:		http://www.libsdl.org/projects/SDL_ttf/release-1.2.html
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	SDL-devel >= 1.2.5-2
 BuildRequires:	autoconf >= 2.59-9
@@ -29,7 +29,7 @@ przykładowy ciąg znaków zadanym fontem TrueType.
 
 %description -l pt_BR.UTF-8
 Esta é uma biblioteca que permite a utilização de fontes TrueType em
-suas aplicações SDL. Ela vem com o programa exemplo "showfont" que
+suas aplicações SDL. Ela vem com o programa exemplo "sdlfont" que
 mostra uma string exemplo para uma fonte TrueType fornecida.
 
 %package devel
