@@ -1,5 +1,5 @@
 Summary:	Simple DirectMedia Layer - ttf handling
-Summary(pl.UTF-8):	Biblioteka obsługi fontów TTF
+Summary(pl.UTF-8):	Biblioteka obsługi fontów TTF dla SDL
 Summary(pt_BR.UTF-8):	Simple DirectMedia Layer - Biblioteca de fontes TrueType
 Name:		SDL_ttf
 Version:	2.0.11
@@ -52,17 +52,17 @@ Este pacote contém os cabeçalhos que programadores vão precisar para
 desenvolver aplicações utilizando a SDL_ttf.
 
 %package static
-Summary:	Static SDL_ttf libraries
-Summary(pl.UTF-8):	Biblioteki statyczne SDL_ttf
+Summary:	Static SDL_ttf library
+Summary(pl.UTF-8):	Biblioteka statyczna SDL_ttf
 Summary(pt_BR.UTF-8):	Biblioteca estática para desenvolvimento utilizando a SDL_ttf
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static SDL_ttf libraries.
+Static SDL_ttf library.
 
 %description static -l pl.UTF-8
-Biblioteki statyczne SDL_ttf.
+Biblioteka statyczna SDL_ttf.
 
 %description static -l pt_BR.UTF-8
 Este pacote contém a biblioteca estática que programadores vão
@@ -77,9 +77,10 @@ SDL_ttf.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure \
-	LIBS="-lm"
-%{__make}
+%configure
+
+%{__make} \
+	libSDL_ttf_la_LIBADD="-lm"
 
 %install
 rm -rf $RPM_BUILD_ROOT
